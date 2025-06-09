@@ -1,6 +1,17 @@
-docs
-====
+Game_of_Life Modules
+===================
 
-.. toctree::
-   :maxdepth: 4
+.. automodule:: main
+   :members:
+   :undoc-members:
+   :show-inheritance:
 
+.. automodule:: core
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+.. automodule:: ui
+   :members:
+   :undoc-members:
+   :show-inheritance:

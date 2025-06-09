@@ -1,12 +1,17 @@
 import tkinter as tk
 from ui import GameOfLifeApp
 
-# Entry point of the application
-def main():
-    root = tk.Tk()
-    root.withdraw() # Hide main window until size is chosen
 
-    # Dialog to select grid size
+def main():
+    """
+    Launches the Game of Life application.
+
+    Opens a dialog to select the initial grid size,
+    then starts the main application window.
+    """
+    root = tk.Tk()
+    root.withdraw()
+
     size_dialog = tk.Toplevel()
     size_dialog.title("Field Size")
     tk.Label(size_dialog, text="Rows:").grid(row=0, column=0)
@@ -18,8 +23,10 @@ def main():
     tk.Entry(size_dialog, textvariable=rows_var).grid(row=0, column=1)
     tk.Entry(size_dialog, textvariable=cols_var).grid(row=1, column=1)
 
-    # Start the game after size is chosen
     def confirm():
+        """
+        Confirms the size input and launches the Game of Life UI.
+        """
         size_dialog.destroy()
         root.deiconify()
         root.title("Game of Life - Conway")
